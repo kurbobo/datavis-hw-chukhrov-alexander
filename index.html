@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>DataViz19</title>
+        <meta charset=”utf-8”>
+    </head>
+    <body>
+    	<!-- <input type="checkbox" id="one" onchange="fun1()"> -->
+        <svg width="500" height="500">
+        	<circle cx="250" cy="250" r="150" fill="yellow">
+        	</circle>
+        	<ellipse cx="300" cy="200" rx="25" ry="50">
+        	</ellipse>
+        	<ellipse cx="200" cy="200" rx="25" ry="50">
+        	</ellipse>
+        	<path id="curve" stroke="black" d="M150 350 Q 225 200 350 350" fill="transparent" >
+        </svg>
+        <input type="checkbox" id="one" name="option" value="a" onclick="fu();"/>
+    	<label id="lb">Sad</label>
+
+        <script>
+function fu() {
+  var checkBox = document.getElementById("one");
+  var curve = document.getElementById("curve");
+  var lb = document.getElementById("lb");
+  if (checkBox.checked){
+  	lb.innerHTML = "Happy";
+    curve.setAttribute("d", "M150 300 Q 225 400 350 300");
+  } else {
+     curve.setAttribute("d", "M150 350 Q 225 200 350 350");
+     lb.innerHTML = "Sad";
+  }
+}
+</script>
+    </body>
+</html>
